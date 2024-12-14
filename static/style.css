@@ -1,0 +1,92 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffe4e1;
+}
+.header {
+    background-color: #ffcc00;
+    padding: 20px;
+    text-align: left;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header h1 {
+    color: #ff69b4;
+    font-size: 3em;
+    margin: 0;
+}
+.header .image {
+    width: 50px;
+    height: 50px;
+    background-color: #ff69b4;
+}
+.nav {
+    background-color: #ff69b4;
+    text-align: center;
+    padding: 10px 0;
+    border-radius: 30px;
+    margin: -15px auto 20px auto;
+    width: fit-content;
+    position: relative;
+    z-index: 2;
+}
+.nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+.nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: 10px 20px;
+    display: inline-block;
+    border-radius: 5px;
+    transition: background-color 0.3s, border-radius 0.3s;
+}
+.nav ul li a:hover {
+    background-color: #ff1493;
+    border-radius: 15px;
+}
+.footer {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: 1;
+    margin-top: 20px;
+    border-top: 2px solid #ff69b4;
+}
+.footer-left {
+    background-color: #ffcc00;
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+}
+.footer-left p {
+    color: #ff69b4;
+    font-size: 1.2em;
+    margin: 0;
+    font-weight: bold;
+}
+.footer-right {
+    background-color: #ff69b4;
+    width: 80%;
+    padding: 10px;
+}
+.atom-icon {
+    width: 50px;
+    height: 50px;
+    background: url('atom-icon.png') no-repeat center center;
+    background-size: contain;
+}
