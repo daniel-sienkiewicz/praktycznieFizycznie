@@ -1,6 +1,29 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h2>Kontakt</h2>
-    <p>Informacje kontaktowe...</p>
+    <div class="container mt-5">
+        <h2>Kontakt</h2>
+        <form action="/send_email" method="post">
+            <div class="mb-3">
+                <label for="first_name" class="form-label">Imię:</label>
+                <input type="text" class="form-control" id="first_name" name="first_name" required>
+            </div>
+            <div class="mb-3">
+                <label for="last_name" class="form-label">Nazwisko:</label>
+                <input type="text" class="form-control" id="last_name" name="last_name" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Twój email:</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="mb-3">
+                <label for="message" class="form-label">Treść wiadomości:</label>
+                <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+            </div>
+            <div class="mb-3">
+                <div class="g-recaptcha" data-sitekey="YOUR_RECAPTCHA_SITE_KEY"></div>
+            </div>
+            <button type="submit" class="btn btn-primary">Wyślij</button>
+        </form>
+    </div>
 {% endblock %}

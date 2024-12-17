@@ -1,3 +1,5 @@
 .venv
 .idea
 static/images/
+visits.txt
+ips.txt
