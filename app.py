@@ -37,7 +37,7 @@ def record_ip(ip_address):
 
 def get_location(ip_address):
     try:
-        response = requests.get(f'http://ipinfo.io/{ip_address}/json')
+        response = requests.get(f'https://ipapi.co/{ip_address}/json')
         data = response.json()
         location = f"{data['city']}, {data['region']}, {data['country']}"
     except:
