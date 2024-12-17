@@ -3,6 +3,9 @@ body {
     margin: 0;
     padding: 0;
     background-color: #ffe4e1;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 .header {
     background-color: #ffcc00;
@@ -70,22 +73,24 @@ body {
     margin: 5px 0;
     transition: 0.4s;
 }
+.content {
+    flex: 1; /* Sprawia, że zawartość rośnie, aby wypełnić przestrzeń */
+}
 .footer {
     display: flex;
-    position: absolute;
-    bottom: 0;
     width: 100%;
     z-index: 1;
-    margin-top: 20px;
+    margin-top: auto; /* Zapewnia, że stopka jest na dole strony */
     border-top: 2px solid #ff69b4;
+    background-color: #ffcc00;
+    padding: 10px 0;
+    position: relative;
 }
 .footer-left {
-    background-color: #ffcc00;
     width: 20%;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 10px 0;
 }
 .footer-left p {
     color: #ff69b4;
@@ -123,5 +128,12 @@ body {
     }
     .nav ul#menu {
         display: none;
+    }
+    .footer {
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-left, .footer-right {
+        width: 100%;
     }
 }
