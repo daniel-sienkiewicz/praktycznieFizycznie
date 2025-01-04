@@ -75,6 +75,8 @@ body {
 }
 .content {
     flex: 1; /* Sprawia, że zawartość rośnie, aby wypełnić przestrzeń */
+    margin: 0 20px; /* Dodany margines dla tekstu */
+    text-align: justify; /* Dodane wyjustowanie tekstu */
 }
 .footer {
     display: flex;
@@ -86,11 +88,11 @@ body {
     padding: 10px 0;
     position: relative;
 }
-.footer-left {
-    width: 20%;
+.footer-left, .footer-center, .footer-right {
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 33.33%; /* Zmiana szerokości na równe sekcje */
 }
 .footer-left p {
     color: #ff69b4;
@@ -98,9 +100,13 @@ body {
     margin: 0;
     font-weight: bold;
 }
+.footer-center {
+    gap: 20px; /* Dodany odstęp między logotypami */
+    background-color: #ff69b4; /* Dodane tło */
+    padding: 10px;
+}
 .footer-right {
     background-color: #ff69b4;
-    width: 80%;
     padding: 10px;
 }
 .atom-icon {
@@ -133,7 +139,8 @@ body {
         flex-direction: column;
         align-items: center;
     }
-    .footer-left, .footer-right {
+    .footer-left, .footer-center, .footer-right {
         width: 100%;
+        justify-content: center;
     }
 }
